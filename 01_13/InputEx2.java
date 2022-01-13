@@ -15,15 +15,15 @@ public class InputEx2 {
 		String operator = input.next();
 		
 		if (operator.equals("+")) {
-			System.out.print("결과는"+num+"+"+num2+"="+(num + num2)+"입니다.");
+			System.out.println("결과는"+num+"+"+num2+"="+(num + num2)+"입니다.");
 		} else if (operator.equals("-")) {
-			System.out.print("결과는"+num+"-"+num2+"="+(num - num2)+"입니다.");
+			System.out.println("결과는"+num+"-"+num2+"="+(num - num2)+"입니다.");
 		} else if (operator.equals("*")) {
             System.out.println("결과는"+num+"*"+num2+"="+(num*num2)+"입니다.");
 		} else if (operator.equals("/")) {
             System.out.println("결과는"+num+"/"+num2+"="+(num/num2)+"입니다.");
         } else if (operator.equals("%")) {
-			System.out.print("결과는"+num+"%"+num2+"="+(num%num2)+"입니다.");
+			System.out.println("결과는"+num+"%"+num2+"="+(num%num2)+"입니다.");
 		} else {
             System.out.println("잘못 입력하셨습니다. +, -, *, / 중 하나를 입력하세요.");
         }
