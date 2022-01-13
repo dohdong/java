@@ -12,14 +12,14 @@ public class InputEx4 {
 
 		if (num % 4 == 0 ) {
 			if (num % 400 == 0 ) {
-				System.out.print("윤년 입니다.");
+				System.out.println("윤년 입니다.");
 			}else if (num % 100 == 0 ) {
-				System.out.print("평년 입니다.");
+				System.out.println("평년 입니다.");
 			}else {
-				System.out.print("윤년 입니다.");
+				System.out.println("윤년 입니다.");
 			}
 		}else {
-			System.out.print("평년 입니다.");
+			System.out.println("평년 입니다.");
 		}
 		input.close(); 
 
