@@ -1,0 +1,9 @@
+switch(표현식) 
+이 표현식에는 변수 or 연산식 or 메서드호출 : 정수(byte, short, char, int) 문자열 이 들어감.
+
+switch (표현식) { 
+    case 값1 : 문장; break;    // break를 써주어야 해당 문장을 수행하고 빠져나옴. 
+			// 없으면 case와 같던 틀리던 계속 밑으로 실행됨.
+    case 값2 : 수행문장 ; break;
+    ...
+   default : 문장 :              // 얘는 break는 필요없음. 
