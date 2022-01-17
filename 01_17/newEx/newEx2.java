@@ -40,7 +40,7 @@ package newEx;
 //}
 
 
-class newEx2 {
+public class newEx2 {
    public static void main(String args[]) {
        int total =0;
        for(int i=10;i<100;i++){
