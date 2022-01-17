@@ -74,6 +74,7 @@ public class newEx5 {
 		else {
 			System.out.println("틀린주민번호");
 		}
+		input.close();
 
 	}
 }
