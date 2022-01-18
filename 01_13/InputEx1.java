@@ -1,8 +1,9 @@
-import java.util.Scanner;
+import java.util.Scanner; //// 코드어시스트 는 ctrl+space
 
 
 
 public class InputEx1 {
+	//사용자로부터 1~100사이의 정수를 입력받습니다.
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in) ;
