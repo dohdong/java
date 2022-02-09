@@ -1,0 +1,78 @@
+430p try catch 블록 
+
+예외처리를 할때는 당연하지만 작은범위의 예외부터 처리해주는것이 맞다.
+
+436p args[0], args 배열은 cmd 창으로 입력할 때, javac Test.java 하고, java Test 로 출력을 할텐데
+이때 java Test 10 20 <-- 이때 10 20 이 args[0], args[1] 같은 녀석들이다. (요즘엔 이렇게 아무도 안쓰긴함)
+
+
+
+-------------제너릭
+public class Box<T> 에서
+
+(Box<String> box = new Box<String>(); , Box<Integer> box = new Box<Integer>(); )
+public class Box<String>, public class Box<Integer> 로 쉽게 사용가능.
+
+★타입변환의 불편함을 제거함.
+public class 클래스명<T> ( 꼭 T 일 필요는 없지만 T가 주로쓰임 )
+
+(모든 클래스는 object 를 상속받음, 가장 최상위가 object임.)
+
+
+-------------------- 컬렉션
+배열의 단점때문에 컬레션 프레임워크를 쓴다.
+
+list , set , map -> 인터페이스
+그 밑에는 구현한 녀석들이 있음.
+
+list -> 순서를 유지하고 저장, 중복 저장 가능  
+set -> 순서가 없음, 중복 저장 안됨 (단 int, String, double 등에 한해서임)   
+			-> 이거 일때는 FMember 에서 override 를 할 필요없이 equals 비교를 해줌
+
+map 은 조금 다른 분류 -> 키와 값의 쌍으로 저장됨, 키는 중복이 안됨
+
+
+List 컬렉션 
+특징 1. 인덱스로 관리 2.중복해서 객체저장가능 3.객체를 일렬로 늘어놓은 구조.
+구현 클래스 ArrayList, Vector(는 안함), LinkedList
+724p 표 잘보자 ( list.add(1,"홍길동") 이렇게 하면 1번자리에 객체 삽입하고, 나머지는 뒤로 미루는 메서드) 
+
+
+iterator 는 순서가 있는 것을 가져옴..
+
+
+LinkedList
+빈번하게 객체 삭제와 삽입이 일어나면 성능이 좋다.
+
+
+
+Set
+기능에는 추가, 검색, 삭제 뭐 그런게 있는데, 인덱스로 가져올수없다, 중복이 안되고,
+삭제할때는 객체의 이름으로 삭제한다(인덱스x) 
+Iterator 를 사용할때는
+Set<String> set = ...;    (이때 소문자 set 으로 써야 함.)
+
+Iterator<String> iterator = set.iterator();
+while (iterator.hasNext())  	
+{
+	str = (String)iterator.next();
+	System.out.println(str);
+}
+
+
+
+
+
+Comparable 인터페이스를 알아야 Treeset을 알 수 있게됨.
+
+
+
+
+
+
+
+
+
+
+
+.
