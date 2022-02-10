@@ -1,0 +1,68 @@
+
+다 drop 해버리고  -- drop table dept cascade constraints;
+
+
+--table 생성 
+
+create table dept
+(did varchar2(10),
+dname varchar2(15),
+primary key(did) );
+
+create table student
+(sid char(7) not null primary key,
+ sname varchar2(10) not null,
+ did varchar2(10) not null,
+ constraint fk_did foreign key(did) references dept(did));
+
+
+--dept 데이터 입력
+insert into dept
+values('IT_01','컴퓨터과');
+insert into dept
+values('IT_02','건축과');
+
+--student 테이블에 데이터 입력
+insert into student
+values('100100','김철수','IT_02');
+insert into student
+values('100200','이철수','IT_01');
+insert into student
+values('100300','김철수','IT_02');
+
+
+
+--- JDBC 구조
+JDBC 드라이버 매니저가 연결을 해줌
+ DBMS가 바뀌어도 자바 응용 프로그램은 변하지 않는다.
+
+DESKTOP-37CQ08K
+
+
+
+Statement 클래스
+SQL 문을 실행하기 위해서는 Statement 클래스를 이용.
+주요 메소드 3개가 있음. ResultSet executeQuery(String sql) , int executeUpdate(String sql) , void close() 
+
+
+ResultSet 클래스
+-SQL 문 실행 결과를 얻어오기 위해서는 ResultSet 클래스를 이용.
+커서(cursor)를 관리.
+
+-테이블의 모든 데이터 검색
+Statement stmt = conn.createStatement();
+ResultSet rs = stmt.executeQuery("select * from student");  //(  괄호 안에 내용을 바꿔서 특정열이나, 조건검색이 가능)
+
+while (rs.next() ) {
+syso ( rs.getString("name")) ;
+
+}
+rs.close();
+
+
+
+
+
+
+
+.
