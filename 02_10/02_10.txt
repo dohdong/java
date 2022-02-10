@@ -1,0 +1,43 @@
+Map 
+
+키를 알 때 객체 얻는 방법
+get() 
+ex) Map<String, Integer> map = ~;
+map.put("홍길동", 30);
+int score = map.get("홍길동") ;
+map.remove( "홍길동" );
+
+p741.
+
+keySet 메소드로 가져오기
+ex) for(String key: map.keySet() {
+	System.out.println(String.format("키 :%s, 값 : %s" , key, map.get(key))) ;  }
+
+Set<Map.Entry<K,V>> entrySet() 
+Set<Map.Entry<K,V>> entrySet() = map.entrySey();
+Iterator<Map.Entry<K,V>> entryIterator = entrySet.iterator();
+while (entryIterator.hasNext()) {
+    Map.Entry<K,V>entry = entryIterator.next();
+    K key = entry.getKey();
+    V value = entry.getValue();
+
+
+
+
+
+
+
+
+
+
+.
+
+
+
+
+
+
+
+
+
+.
